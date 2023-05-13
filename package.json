@@ -1,0 +1,50 @@
+{
+  "name": "@nebrelbug/npm-lib-template",
+  "version": "1.0.0",
+  "description": "Example template of the ideal npm package",
+  "keywords": [
+    "template"
+  ],
+  "type": "commonjs",
+  "main": "./dist/two.umd.js",
+  "umd:main": "./dist/two.umd.js",
+  "unpkg": "./dist/browser.min.umd.js",
+  "module": "./dist/two.module.mjs",
+  "types": "./dist/types/index.d.ts",
+  "source": "src/index.ts",
+  "exports": {
+    "types": "./dist/types/index.d.ts",
+    "browser": "./dist/browser.min.umd.js",
+    "require": "./dist/two.umd.js",
+    "import": "./dist/two.module.mjs",
+    "default": "./dist/two.umd.js"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebrelbug/npm-lib-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nebrelbug/npm-lib-template/issues"
+  },
+  "homepage": "https://github.com/nebrelbug/npm-lib-template#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
