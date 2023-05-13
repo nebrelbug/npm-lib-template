@@ -24,7 +24,9 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:node": "microbundle lib/index.ts --target node --format esm,umd",
+    "build:browser": "microbundle lib/browser.ts --target web --format umd --output dist/browser.min.js",
+    "build": "npm run build:node && npm run build:browser"
   },
   "repository": {
     "type": "git",
@@ -40,7 +42,8 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^8.0.3"
+    "husky": "^8.0.3",
+    "microbundle": "^0.15.1"
   },
   "config": {
     "commitizen": {
