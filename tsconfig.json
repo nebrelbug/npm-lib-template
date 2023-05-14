@@ -15,5 +15,5 @@
     "noUnusedParameters": true,
     "esModuleInterop": true
   },
-  "files": ["lib/index.ts", "lib/browser.ts"]
+  "files": ["src/index.ts", "src/browser.ts"]
 }

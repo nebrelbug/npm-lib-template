@@ -24,8 +24,8 @@
     "dist"
   ],
   "scripts": {
-    "build:node": "microbundle lib/index.ts --target node --format esm,umd",
-    "build:browser": "microbundle lib/browser.ts --target web --format umd --output dist/browser.min.js",
+    "build:node": "microbundle src/index.ts --target node --format esm,umd",
+    "build:browser": "microbundle src/browser.ts --target web --format umd --output dist/browser.min.js",
     "build": "npm run build:node && npm run build:browser"
   },
   "repository": {
