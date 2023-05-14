@@ -1,6 +1,6 @@
 {
   "name": "@nebrelbug/npm-lib-template",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "Example template of the ideal npm package",
   "keywords": [
     "template"
@@ -26,11 +26,12 @@
   "scripts": {
     "build:node": "microbundle src/index.ts --target node --format esm,umd",
     "build:browser": "microbundle src/browser.ts --target web --format umd --output dist/browser.min.js",
-    "build": "npm run build:node && npm run build:browser"
+    "build": "npm run build:node && npm run build:browser",
+    "semantic-release": "semantic-release"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nebrelbug/npm-lib-template.git"
+    "url": "https://github.com/nebrelbug/npm-lib-template.git"
   },
   "author": "",
   "license": "ISC",
@@ -43,7 +44,8 @@
     "@commitlint/config-conventional": "^17.6.3",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^8.0.3",
-    "microbundle": "^0.15.1"
+    "microbundle": "^0.15.1",
+    "semantic-release": "^21.0.2"
   },
   "config": {
     "commitizen": {
