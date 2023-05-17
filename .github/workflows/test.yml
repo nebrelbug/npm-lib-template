@@ -1,30 +1,33 @@
 # taken and modified from https://commitlint.js.org/#/guides-ci-setup
 
-name: CI
+name: Build & Test
 
 on: [push, pull_request]
 
 jobs:
-  commitlint:
-    runs-on: ubuntu-22.04
+  build_and_test:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@v3
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - run: npm test
+
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
         with:
-          node-version: "20.x"
-      - run: npm install
-      - name: Print versions
-        run: |
-          git --version
-          node --version
-          npm --version
-          npx commitlint --version
-      - name: Install commitlint
-        run: |
-          npm install conventional-changelog-conventionalcommits
-          npm install commitlint@latest
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v3
 
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'

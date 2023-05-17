@@ -1,3 +1,8 @@
+dist
+
+pnpm-lock.yaml
+yarn.lock
+
 node_modules
 coverage
 .nyc_output
@@ -9,9 +14,3 @@ compiled
 .awcache
 .rpt2_cache
 docs
-
-dist
-
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
